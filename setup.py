@@ -13,9 +13,9 @@ install_requires = [
 VERSION = '0.0.2'
 
 # read the contents of your README file
-this_directory = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(this_directory, 'README.md')) as f:
-    long_description = f.read()
+# this_directory = os.path.abspath(os.path.dirname(__file__))
+# with open(os.path.join(this_directory, 'README.md')) as f:
+#     long_description = f.read()
 
 setup(
     name='deepquantiles',
@@ -27,8 +27,6 @@ setup(
     packages=find_packages(exclude=('tests', )),
     entry_points={'console_scripts': []},
     include_package_data=True,
-    author='Igor Gotlibovych',
-    author_email='igor.gotlibovych@gmail.com',
     license='MIT',
     install_requires=install_requires,
     extras_require={},
