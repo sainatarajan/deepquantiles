@@ -19,7 +19,7 @@ def _tilted_loss_scalar(q, y_true, y_pred):
 def keras_quantile_loss(q):
     """Return keras loss for quantile `q`."""
     func = functools.partial(_tilted_loss_scalar, q)
-    func.__name__ = f'qunatile loss, q={q}'
+    func.__name__ = f'qunatile_loss_q_{q}'
     return func
 
 

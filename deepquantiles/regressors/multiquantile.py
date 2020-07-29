@@ -30,7 +30,7 @@ class MultiQuantileRegressor(BaseEstimator):
         self.batch_size = batch_size
 
     def _model(self):
-        input_features = Input((1, ), name='X')
+        input_features = Input((6, ), name='X')
         # append final output
         intermediate = input_features
         for idx, units in enumerate(self.shared_units):
@@ -46,7 +46,7 @@ class MultiQuantileRegressor(BaseEstimator):
         outputs = [
             Dense(1, name=f'q_{q}_out')(output) for q, output in zip(self.quantiles, outputs)
         ]
-        model = Model(input_features, outputs, name='Quantile Regressor')
+        model = Model(input_features, outputs, name='QuantileRegressor')
 
         model.compile(
             optimizer=Adam(lr=self.lr), loss=[keras_quantile_loss(q) for q in self.quantiles]
