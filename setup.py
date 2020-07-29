@@ -21,7 +21,7 @@ setup(
     name='deepquantiles',
     version=VERSION,
     description='Deep Continuous Quantile Regression',
-    url='https://github.com/ig248/deepquantiles',
+    url='https://github.com/sainatarajan/deepquantiles',
     long_description=long_description,
     long_description_content_type='text/markdown',
     packages=find_packages(exclude=('tests', )),
